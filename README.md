@@ -126,7 +126,7 @@ This project is a PHP-based web application that includes CRUD operations for bl
 ### Admin Page
 
 - After the User registration, update any of the user with Admin role in the database manually (This is only for the initial time)
-- Admins can go to `list-users.php` to manage users and update user roles.
+- Admins can go to `/list-users.php` to manage users and update user roles.
 
 ## Using the API with Postman
 
@@ -141,22 +141,4 @@ To access the API endpoints using Postman, follow these steps:
    - Some Valid API Tokens = "2K47aEsmX2dNqL0oPheWpZ7bC31V4fTl", "Gj9p5LqDzVx3hEwKtM4cW6sRy1gF2bXo", "Gj9p5LqDzVx3hEwKtM4cW6sRy1gF2bXo"
 5. Send the request to retrieve JSON data.
 
-
-
-
-
-
-
-## Using the API with Postman
-
-To access the API endpoints using Postman, follow these steps:
-
-1. Open Postman and create a new request.
-2. Set the request type to `GET`.
-3. Enter the API endpoint URL, e.g., `http://yourdomain.com/apis/list-blogs.php`.
-4. Add the authentication token as a query parameter:
-   - Key: `api_token`
-   - Value: `[Your API Token]`
-   - Some Valid API Tokens = "2K47aEsmX2dNqL0oPheWpZ7bC31V4fTl", "Gj9p5LqDzVx3hEwKtM4cW6sRy1gF2bXo", "Gj9p5LqDzVx3hEwKtM4cW6sRy1gF2bXo"
-5. Send the request to retrieve JSON data.
 
