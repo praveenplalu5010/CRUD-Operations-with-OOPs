@@ -15,9 +15,6 @@ This project is a PHP-based web application that includes CRUD operations for bl
 
 ## Features
 
-
-## Features
-
 - User registration with password hashing.
 - User login and session management.
 - Profile page with update functionality.
