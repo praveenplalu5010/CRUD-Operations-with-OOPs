@@ -104,7 +104,7 @@ This project is a PHP-based web application that includes CRUD operations for bl
 
 5. **Run the application**:
 
-    - Run the server and open the `index.php` file or browse you domain (http://localhost/your_project/).
+    - Run the server and open the `index.php` file or browse your domain (http://localhost/your_project/).
 
 ## Usage
 
