@@ -7,8 +7,8 @@
     * Version      : 1.0
     */
     session_start();
+    
     //Page Configurations
-    $active_class   = 'active';
     $page_title     = 'Login';
     
     //Including necessary files

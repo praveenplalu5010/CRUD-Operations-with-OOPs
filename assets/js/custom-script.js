@@ -207,3 +207,16 @@ function validateBlogCreation(){
    
     return valid;
 }
+
+// Get the current URL path
+var currentPath = window.location.pathname;
+
+// Get all the navbar links
+var navLinks = document.querySelectorAll('nav ul li a');
+
+// Loop through the links and add the active class to the matching link
+navLinks.forEach(function(link) {
+    if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+    }
+});

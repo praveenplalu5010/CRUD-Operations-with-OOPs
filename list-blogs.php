@@ -13,7 +13,6 @@
         exit;
     }
     //Page Configurations
-    $active_class   = 'active';
     $page_title     = 'Blogs';
 
     //Including necessary files

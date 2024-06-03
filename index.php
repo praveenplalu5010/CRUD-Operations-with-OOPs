@@ -6,7 +6,6 @@
      * Date         : 2024-06-03
      * Version      : 1.0
     */
-    $active_class = 'active';
     $page_title     = 'Register';
 ?>
 <?php require_once 'includes/header.php';?>

@@ -27,22 +27,22 @@
             </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <?php if (!isset($_SESSION['user_id'])){ ?>
+                    <?php if (!isset($_SESSION['user_id'])){?>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($active_class == '')? '': $active_class; ?>" aria-current="page" href="index.php">Home</a>
+                            <a class="nav-link" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" <?= ($active_class == '')? '': $active_class; ?> href="registration.php">Register</a>
+                            <a class="nav-link" href="registration.php">Register</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" <?= ($active_class == '')? '': $active_class; ?> href="login.php">Login</a>
+                            <a class="nav-link" href="login.php">Login</a>
                         </li>
                     <?php } else{ ?>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($active_class == '')? '': $active_class; ?>" aria-current="page" href="profile.php">My Profile</a>
+                            <a class="nav-link" aria-current="page" href="profile.php">My Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" <?= ($active_class == '')? '': $active_class; ?> href="list-blogs.php">Blogs</a>
+                            <a class="nav-link" href="list-blogs.php">Blogs</a>
                         </li>
                     <?php } ?>
                     <?php 
@@ -53,7 +53,7 @@
                             if ($user->isAdmin($_SESSION['user_id'])) {
                         ?>
                             <li class="nav-item">
-                                <a class="nav-link" <?= ($active_class == '')? '': $active_class; ?> href="list-users.php">Users</a>
+                                <a class="nav-link" href="list-users.php">Users</a>
                             </li>
                         <?php
                             }
