@@ -1,58 +1,65 @@
 <?php
-session_start();
-//If session is not set, then redirect to Login page
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit;
-}
-//Page Configurations
-$active_class   = 'active';
-$page_title     = 'List Users';
-
-//Including necessary files
-require_once 'includes/header.php';
-require_once 'classes/classUser.php';
-
-$user = new User();
-
-if (!$user->isAdmin($_SESSION['user_id'])) {
-    echo "Access denied!";
-    exit;
-}
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_role'])) {
-    $user_id = $_POST['user_id'];
-    $role = $_POST['role'];
-
-    if ($user->updateUserRole($user_id, $role)) {
-        $_SESSION['success'] = "User role updated successfully!";
-    } else {
-        $_SESSION['error'] = "User role update failed";
+    /*
+    * File Name    : list-users.php
+    * Description  : Listing page of the Users
+    * Author       : Praveen Prabhakaran
+    * Date         : 2024-06-03
+    * Version      : 1.0
+    */
+    session_start();
+    //If session is not set, then redirect to Login page
+    if (!isset($_SESSION['user_id'])) {
+        header('Location: login.php');
+        exit;
     }
-}
+    //Page Configurations
+    $active_class   = 'active';
+    $page_title     = 'List Users';
 
-$users = $user->getAllUsers();
+    //Including necessary files
+    require_once 'includes/header.php';
+    require_once 'classes/classUser.php';
 
-//Validation success message
-if (isset($_SESSION['success'])) {
-    echo '<div class="container px-2 py-2">
-            <div class="alert alert-success" role="alert">
-            ' . $_SESSION['success'] . '
-            </div>
-        </div>';
-    unset($_SESSION['success']);
-    unset($_SESSION['error']);
-}
-//Validation failure message
-if (isset($_SESSION['error'])) {
-    echo '<div class="container px-2 py-2">
-            <div class="alert alert-danger" role="alert">
-            ' . $_SESSION['error'] . '
-            </div>
-        </div>';
-    unset($_SESSION['error']);
-    unset($_SESSION['success']);
-}
+    $user = new User();
+
+    if (!$user->isAdmin($_SESSION['user_id'])) {
+        echo "Access denied!";
+        exit;
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_role'])) {
+        $user_id = $_POST['user_id'];
+        $role = $_POST['role'];
+
+        if ($user->updateUserRole($user_id, $role)) {
+            $_SESSION['success'] = "User role updated successfully!";
+        } else {
+            $_SESSION['error'] = "User role update failed";
+        }
+    }
+
+    $users = $user->getAllUsers();
+
+    //Validation success message
+    if (isset($_SESSION['success'])) {
+        echo '<div class="container px-2 py-2">
+                <div class="alert alert-success" role="alert">
+                ' . $_SESSION['success'] . '
+                </div>
+            </div>';
+        unset($_SESSION['success']);
+        unset($_SESSION['error']);
+    }
+    //Validation failure message
+    if (isset($_SESSION['error'])) {
+        echo '<div class="container px-2 py-2">
+                <div class="alert alert-danger" role="alert">
+                ' . $_SESSION['error'] . '
+                </div>
+            </div>';
+        unset($_SESSION['error']);
+        unset($_SESSION['success']);
+    }
 ?>
 
 <?php if(!empty($user)){?>

@@ -1,3 +1,12 @@
+<?php 
+    /*
+    * File Name    : footer.php
+    * Description  : Footer of the website.
+    * Author       : Praveen Prabhakaran
+    * Date         : 2024-06-03
+    * Version      : 1.0
+    */
+?>
     <!--Javascript files-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">

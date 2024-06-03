@@ -1,60 +1,10 @@
+/*
+* File Name    : style.css
+* Description  : Custom Styles for the website.
+* Author       : Praveen Prabhakaran
+* Date         : 2024-06-03
+* Version      : 1.0
+*/
 body {
     font-family: Arial, sans-serif;
-    /*margin: 20px;*/
-    /*padding: 20px;*/
 }
-/*
-form {
-    margin-bottom: 20px;
-}
-
-input, textarea {
-    display: block;
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 100%;
-    max-width: 300px;
-}
-
-button {
-    padding: 10px 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-}
-
-th {
-    background-color: #f4f4f4;
-}
-*/
-/* Navbar Styling */
-/*
-.navbar-brand img {
-    width: 80px;
-  }
-  .navbar-nav {
-    align-items: center;
-  }
-  .navbar .navbar-nav .nav-link {
-    color: #fff;
-    font-size: 1.1em;
-    padding: 0.5em 1em;
-  }
-  @media screen and (min-width: 768px) {
-    .navbar-brand img {
-      width: 100px;
-    }
-    .navbar-brand {
-      margin-right: 0;
-      padding: 0 1em;
-    }
-  }
-*/
-  

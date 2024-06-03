@@ -1,4 +1,11 @@
 <?php
+    /*
+    * File Name    : registration.php
+    * Description  : User registration page
+    * Author       : Praveen Prabhakaran
+    * Date         : 2024-06-03
+    * Version      : 1.0
+    */
     session_start();
     //Page Configurations
     $active_class   = 'active';

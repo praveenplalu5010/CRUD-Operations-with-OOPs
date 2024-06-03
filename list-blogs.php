@@ -1,50 +1,57 @@
 <?php
-session_start();
-//If session is not set, then redirect to Login page
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit;
-}
-//Page Configurations
-$active_class   = 'active';
-$page_title     = 'Blogs';
+    /*
+    * File Name    : list-blogs.php
+    * Description  : Listing page for the Blogs
+    * Author       : Praveen Prabhakaran
+    * Date         : 2024-06-03
+    * Version      : 1.0
+    */
+    session_start();
+    //If session is not set, then redirect to Login page
+    if (!isset($_SESSION['user_id'])) {
+        header('Location: login.php');
+        exit;
+    }
+    //Page Configurations
+    $active_class   = 'active';
+    $page_title     = 'Blogs';
 
-//Including necessary files
-require_once 'includes/header.php';
-require_once 'classes/classUser.php';
-require_once 'classes/classBlog.php';
-require_once 'classes/classReview.php';
+    //Including necessary files
+    require_once 'includes/header.php';
+    require_once 'classes/classUser.php';
+    require_once 'classes/classBlog.php';
+    require_once 'classes/classReview.php';
 
-//Get all the logged in User's details
-$user           = new User();
-$user_details   = $user->getUserById($_SESSION['user_id']);
-$user_id        = $user_details['id'];
+    //Get all the logged in User's details
+    $user           = new User();
+    $user_details   = $user->getUserById($_SESSION['user_id']);
+    $user_id        = $user_details['id'];
 
-$blog           = new Blog();
-$blogs          = $blog->getAllBlogs();
+    $blog           = new Blog();
+    $blogs          = $blog->getAllBlogs();
 
-$review         = new Review();
+    $review         = new Review();
 
-//Validation success message
-if (isset($_SESSION['success'])) {
-    echo '<div class="container px-2 py-2">
-            <div class="alert alert-success" role="alert">
-            ' . $_SESSION['success'] . '
-            </div>
-        </div>';
-    unset($_SESSION['success']);
-    unset($_SESSION['error']);
-}
-//Validation failure message
-if (isset($_SESSION['error'])) {
-    echo '<div class="container px-2 py-2">
-            <div class="alert alert-danger" role="alert">
-            ' . $_SESSION['error'] . '
-            </div>
-        </div>';
-    unset($_SESSION['error']);
-    unset($_SESSION['success']);
-}
+    //Validation success message
+    if (isset($_SESSION['success'])) {
+        echo '<div class="container px-2 py-2">
+                <div class="alert alert-success" role="alert">
+                ' . $_SESSION['success'] . '
+                </div>
+            </div>';
+        unset($_SESSION['success']);
+        unset($_SESSION['error']);
+    }
+    //Validation failure message
+    if (isset($_SESSION['error'])) {
+        echo '<div class="container px-2 py-2">
+                <div class="alert alert-danger" role="alert">
+                ' . $_SESSION['error'] . '
+                </div>
+            </div>';
+        unset($_SESSION['error']);
+        unset($_SESSION['success']);
+    }
 ?>
 
 <?php if(!empty($blogs)){?>

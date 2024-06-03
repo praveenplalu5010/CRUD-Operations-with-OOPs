@@ -1,4 +1,11 @@
 <?php
+    /*
+    * File Name    : login.php
+    * Description  : User Login page for the website
+    * Author       : Praveen Prabhakaran
+    * Date         : 2024-06-03
+    * Version      : 1.0
+    */
     session_start();
     //Page Configurations
     $active_class   = 'active';

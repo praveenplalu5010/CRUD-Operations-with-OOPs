@@ -1,3 +1,12 @@
+<?php 
+    /*
+    * File Name    : header.php
+    * Description  : Header of the website.
+    * Author       : Praveen Prabhakaran
+    * Date         : 2024-06-03
+    * Version      : 1.0
+    */
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -40,13 +49,14 @@
                         require_once 'classes/classUser.php';
 
                         $user = new User();
-
-                        if ($user->isAdmin($_SESSION['user_id'])) {
-                    ?>
-                        <li class="nav-item">
-                            <a class="nav-link" <?= ($active_class == '')? '': $active_class; ?> href="list-users.php">Users</a>
-                        </li>
-                    <?php
+                        if(isset($_SESSION['user_id'])){
+                            if ($user->isAdmin($_SESSION['user_id'])) {
+                        ?>
+                            <li class="nav-item">
+                                <a class="nav-link" <?= ($active_class == '')? '': $active_class; ?> href="list-users.php">Users</a>
+                            </li>
+                        <?php
+                            }
                         }
                     ?>
                 </ul>

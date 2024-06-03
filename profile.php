@@ -1,4 +1,11 @@
 <?php
+    /*
+    * File Name    : profile.php
+    * Description  : User Profile page
+    * Author       : Praveen Prabhakaran
+    * Date         : 2024-06-03
+    * Version      : 1.0
+    */
     session_start();
     //If session is not set, then redirect to Login page
     if (!isset($_SESSION['user_id'])) {

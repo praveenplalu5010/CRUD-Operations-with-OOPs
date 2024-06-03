@@ -1,3 +1,10 @@
+/*
+* File Name    : custom-script.js
+* Description  : Custom Javascript codes for the website
+* Author       : Praveen Prabhakaran
+* Date         : 2024-06-03
+* Version      : 1.0
+*/
 //Function to check email validation
 function IsEmail(email) {
     var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
